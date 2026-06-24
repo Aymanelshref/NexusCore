@@ -337,6 +337,9 @@ export default function Home() {
           <p className="text-slate-700 text-xs mt-8">{text.rights}</p>
         </div>
       </section>
+      <div className="h-[1000px] bg-red-500">
+  TEST
+</div>
     </main>
   );
 }
