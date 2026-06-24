@@ -9,7 +9,7 @@ export default function Hero() {
           🔥 Ecosystem Platform 2026
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
           نظام تشغيل واحد
           <br />
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -17,7 +17,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           منصة NexusCore المتكاملة تربط بين الكافيهات، المطاعم، صالونات التجميل، وأماكن الألعاب في نظام واحد ذكي
         </p>
 

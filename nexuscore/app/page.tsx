@@ -2,7 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
+import {
+  Smartphone,
+  ChefHat,
+  Gamepad2,
+  Receipt,
+  MessageCircle,
+  Package,
+  Users,
+  Bot
+} from "lucide-react";
 export default function Home() {
   const [lang, setLang] = useState<"ar" | "en">("ar");
 
@@ -149,14 +158,14 @@ export default function Home() {
   const text = t[lang];
 
   const features = [
-    { icon: "📱", title: "تطبيق الـ Waiter", titleEn: "Waiter App", desc: "النادل يأخذ الأوردر من العميل بالموبايل، يرسله للمطبخ مباشرة، ويفتح PlayStation أو يشغل التايمر", descEn: "Waiter takes orders on mobile, sends to kitchen instantly, opens PlayStation or starts timer", color: "bg-blue-500/10" },
-    { icon: "🖥️", title: "شاشة المطبخ KDS", titleEn: "Kitchen Display KDS", desc: "شاشة داخلية للمطبخ تظهر الأوردرات الجديدة، وقت التجهيز، وحالة كل طلب", descEn: "Internal kitchen screen showing new orders, prep time, and order status", color: "bg-purple-500/10" },
-    { icon: "⏱️", title: "نظام التايمر والألعاب", titleEn: "Gaming Timer System", desc: "مؤقت ذكي لأجهزة PlayStation والألعاب. حساب تلقائي للوقت والسعر. حجز الأجهزة مسبقاً", descEn: "Smart timer for PlayStation and gaming devices. Automatic time and price calculation", color: "bg-amber-500/10" },
-    { icon: "🧾", title: "الفواتير الذكية", titleEn: "Smart Invoicing", desc: "إصدار فاتورة فورية لكل طلب. إمكانية إرسال الفاتورة للعميل على الواتساب أو البريد", descEn: "Instant invoice for every order. Send invoice to customer via WhatsApp or email", color: "bg-emerald-500/10" },
-    { icon: "💬", title: "تواصل داخلي", titleEn: "Internal Communication", desc: "شات داخلي بين النادل والمطبخ والكاشير. النادل يقول: 'الشاي متأخر' أو 'الأوردر جاهز'", descEn: "Internal chat between waiter, kitchen, and cashier", color: "bg-rose-500/10" },
-    { icon: "📦", title: "إدارة المخزون والوصفات", titleEn: "Inventory & Recipes", desc: "كل منتج له وصفة (مكونات + كميات). الخصم التلقائي من المخزون مع كل بيعة. تنبيه عند النقص", descEn: "Every product has a recipe. Auto inventory deduction per sale. Low stock alerts", color: "bg-cyan-500/10" },
-    { icon: "👥", title: "إدارة الموظفين", titleEn: "Staff Management", desc: "حضور وانصراف، صلاحيات مختلفة لكل موظف، شيفتات، ورواتب", descEn: "Attendance, different permissions per employee, shifts, and salaries", color: "bg-blue-500/10" },
-    { icon: "🤖", title: "مساعد AI", titleEn: "AI Assistant", desc: "تحليل المبيعات، اقتراح العروض، تنبيه النواقص، وتوقع الأرباح", descEn: "Sales analysis, offer suggestions, shortage alerts, and profit prediction", color: "bg-violet-500/10" },
+    { icon: "<Smartphone size={28} />", title: "تطبيق الـ Waiter", titleEn: "Waiter App", desc: "النادل يأخذ الأوردر من العميل بالموبايل، يرسله للمطبخ مباشرة، ويفتح PlayStation أو يشغل التايمر", descEn: "Waiter takes orders on mobile, sends to kitchen instantly, opens PlayStation or starts timer", color: "bg-blue-500/10" },
+    { icon: "<ChefHat size={28} />", title: "شاشة المطبخ KDS", titleEn: "Kitchen Display KDS", desc: "شاشة داخلية للمطبخ تظهر الأوردرات الجديدة، وقت التجهيز، وحالة كل طلب", descEn: "Internal kitchen screen showing new orders, prep time, and order status", color: "bg-purple-500/10" },
+    { icon: " <Gamepad2 size={28} />", title: "نظام التايمر والألعاب", titleEn: "Gaming Timer System", desc: "مؤقت ذكي لأجهزة PlayStation والألعاب. حساب تلقائي للوقت والسعر. حجز الأجهزة مسبقاً", descEn: "Smart timer for PlayStation and gaming devices. Automatic time and price calculation", color: "bg-amber-500/10" },
+    { icon: "<Receipt size={28} />", title: "الفواتير الذكية", titleEn: "Smart Invoicing", desc: "إصدار فاتورة فورية لكل طلب. إمكانية إرسال الفاتورة للعميل على الواتساب أو البريد", descEn: "Instant invoice for every order. Send invoice to customer via WhatsApp or email", color: "bg-emerald-500/10" },
+    { icon: "<MessageCircle size={28} />", title: "تواصل داخلي", titleEn: "Internal Communication", desc: "شات داخلي بين النادل والمطبخ والكاشير. النادل يقول: 'الشاي متأخر' أو 'الأوردر جاهز'", descEn: "Internal chat between waiter, kitchen, and cashier", color: "bg-rose-500/10" },
+    { icon: "<Package size={28} />", title: "إدارة المخزون والوصفات", titleEn: "Inventory & Recipes", desc: "كل منتج له وصفة (مكونات + كميات). الخصم التلقائي من المخزون مع كل بيعة. تنبيه عند النقص", descEn: "Every product has a recipe. Auto inventory deduction per sale. Low stock alerts", color: "bg-cyan-500/10" },
+    { icon: "<Users size={28} />", title: "إدارة الموظفين", titleEn: "Staff Management", desc: "حضور وانصراف، صلاحيات مختلفة لكل موظف، شيفتات، ورواتب", descEn: "Attendance, different permissions per employee, shifts, and salaries", color: "bg-blue-500/10" },
+    { icon: " <Bot size={28} />", title: "مساعد AI", titleEn: "AI Assistant", desc: "تحليل المبيعات، اقتراح العروض، تنبيه النواقص، وتوقع الأرباح", descEn: "Sales analysis, offer suggestions, shortage alerts, and profit prediction", color: "bg-violet-500/10" },
   ];
 
   return (
@@ -286,7 +295,9 @@ export default function Home() {
             {features.map((f, i) => (
               <div key={i} className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all hover:-translate-y-1">
                 <div className={`w-12 h-12 rounded-xl ${f.color} flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition`}>
-                  {f.icon}
+                 <div className="text-cyan-400">
+  {f.icon}
+</div>
                 </div>
                 <h4 className="text-lg font-bold mb-2">{lang === "ar" ? f.title : f.titleEn}</h4>
                 <p className="text-slate-400 text-sm leading-relaxed">{lang === "ar" ? f.desc : f.descEn}</p>
@@ -309,10 +320,10 @@ export default function Home() {
             <a href="https://instagram.com/YOUR_LINK" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-pink-500/10 hover:border-pink-500/30 transition">
               📸 Instagram
             </a>
-            <a href="https://wa.me/YOUR_NUMBER" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition">
+            <a href="https://wa.me/20108020757" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition">
               💬 WhatsApp
             </a>
-            <a href="tel:+20YOUR_NUMBER" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-blue-500/10 hover:border-blue-500/30 transition">
+            <a href="tel:+20108020757" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-blue-500/10 hover:border-blue-500/30 transition">
               📞 Phone
             </a>
           </div>
